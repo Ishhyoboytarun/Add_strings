@@ -44,6 +44,15 @@ def add(numbers):
             #checking if it is an integer
             if numbers[i][j] in ['1','2','3','4','5','6','7','8','9','0','-']:
                 num+= numbers[i][j]
+                
+            else:        
+                #extracting the delimiter from the given string
+                k = j+1
+                while k<len(numbers[i]) and numbers[i][k] not in ['1','2','3','4','5','6','7','8','9','0','-']:
+                    k+=1
+
+                #invalid delimiter(s)
+                if numbers[i][j:k] not in delimiters: raise Exception("invalid delimiter(s) found",numbers[i][j:k])
             
         
 if __name__ == "__main__":
