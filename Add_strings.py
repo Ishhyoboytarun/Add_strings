@@ -53,8 +53,34 @@ def add(numbers):
 
                 #invalid delimiter(s)
                 if numbers[i][j:k] not in delimiters: raise Exception("invalid delimiter(s) found",numbers[i][j:k])
+                    
+                j = k-1
+                if num=="": continue
+
+                #if num is negative
+                if int(num)<0: negatives.append(int(num))
+
+                #if num is positive
+                sum+=int(num) if int(num)<1001 else 0
+
+                #initializing num
+                num = ""
+            j+=1
+       
+        #if num is negative
+        if int(num)<0: negatives.append(int(num))
+
+        #if num is positive
+        sum+=int(num) if int(num)<1001 else 0
+
+
+    #checking negative numbers
+    if negatives:
+        raise Exception("negatives not allowed",negatives)
+
+    return sum 
+
             
-        
 if __name__ == "__main__":
     #taking infinite input
     numbers = []
