@@ -23,6 +23,7 @@ def add(numbers):
     delimiters.add(",")
     start_index = 0
 
+    
     #setting delimiter and starting index
     if numbers[0][0:2]=="//":
         if numbers[0][2]!="[":
@@ -31,6 +32,19 @@ def add(numbers):
             delimiters = findDelimiters(numbers[0][2:])
 
         start_index = 1
+        
+        
+    #finding sum of the numbers
+    sum = 0
+    negatives = []
+    for i in range(start_index,len(numbers)):
+        num = ""
+        j = 0
+        while j<len(numbers[i]):  
+            #checking if it is an integer
+            if numbers[i][j] in ['1','2','3','4','5','6','7','8','9','0','-']:
+                num+= numbers[i][j]
+            
         
 if __name__ == "__main__":
     #taking infinite input
