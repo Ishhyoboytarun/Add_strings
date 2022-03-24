@@ -1,6 +1,8 @@
+import unit_test
+
 if __name__ == "__main__":
     #unit testing
-    testAddMethod()
+    unit_test.testAddMethod()
 
     #taking infinite input
     #uncomment the below lines to give user input and check
