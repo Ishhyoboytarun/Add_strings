@@ -1,3 +1,5 @@
+from add import Add
+
 def testAddMethod():
     #valid test cases
     assert add(['1,2,3','4,5','6','7,8']) == 36
