@@ -1,4 +1,4 @@
-from add import Add
+from Add import add
 
 def testAddMethod():
     #valid test cases
